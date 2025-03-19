@@ -3,35 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HEADER</title>
+  <title>Beautiful Header</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
 </head>
-<body>
-  <header class="text-gray-600 body-font">
-    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-      <!-- Logo -->
-      <a class="flex title-font font-bold items-center text-gray-900 mb-4 md:mb-0">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" 
-             stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-             class="w-10 h-10 text-white p-2 bg-indigo-600 rounded-full" viewBox="0 0 24 24">
-          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-        </svg>
-        <span class="ml-3 text-2xl tracking-wide animated-text">EVENT VISTA 360</span>
-      </a>
-
+<body class="bg-gray-100">
+  <header class="sticky top-0 z-50 bg-gradient-to-r from-indigo-600 to-purple-600 shadow-lg text-white">
+    <div class="container mx-auto flex flex-wrap p-4 flex-col md:flex-row items-center justify-between">
+      
       <!-- Navigation -->
-      <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center space-x-5">
-        <a href="#" class="hover:underline hover:text-gray-900">HOME</a>
-        <a href="#" class="hover:underline hover:text-gray-900">ABOUT US</a>
-        <a href="#" class="hover:underline hover:text-gray-900">SERVICES</a>
-        <a href="#" class="hover:underline hover:text-gray-900">GALLERY</a>
-        <a href="#" class="hover:underline hover:text-gray-900">CONTACT US</a>
+      <nav class="flex flex-wrap items-center text-base justify-center space-x-6 font-medium">
+        <a href="#" class="hover:text-indigo-200 transition duration-200">HOME</a>
+        <a href="#" class="hover:text-indigo-200 transition duration-200">ABOUT US</a>
+        <a href="#" class="hover:text-indigo-200 transition duration-200">SERVICES</a>
+        <a href="#" class="hover:text-indigo-200 transition duration-200">GALLERY</a>
+        <a href="#" class="hover:text-indigo-200 transition duration-200">CONTACT US</a>
       </nav>
 
       <!-- Login Button -->
-      <button class="ml-4 inline-flex items-center bg-gray-100 text-gray-900 font-semibold py-1.5 px-4 rounded-full hover:bg-gray-200 transition duration-200">
+      <button class="mt-4 md:mt-0 inline-flex items-center bg-white text-indigo-600 font-semibold py-2 px-5 rounded-full hover:bg-indigo-100 transition duration-300 shadow-md">
         LOGIN
         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
              stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
