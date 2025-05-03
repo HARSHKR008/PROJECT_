@@ -31,80 +31,33 @@
       </div>
     </header>
     
-    <section class="w-full py-32 bg-white">
-      <div class="container mx-auto px-4">
-        <div class="flex flex-col md:flex-row items-center justify-between min-h-screen gap-8">
-          
-          <!-- Left Video (25%) -->
-          <div class="w-full md:w-1/4 p-4 flex justify-start">
-            <div class="relative rounded-lg overflow-hidden shadow-2xl w-full aspect-[9/16]">
-              <video 
-                class="w-full h-full object-cover" 
-                autoplay 
-                loop 
-                muted 
-                playsinline 
-                id="heroVideo"
-              >
-                <source src="360_vid.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-    
-              <!-- Custom Sound Button -->
-              <button 
-                onclick="toggleMute()" 
-                class="absolute bottom-4 right-4 bg-white bg-opacity-70 p-2 rounded-full shadow-md hover:bg-opacity-100 transition-all">
-                🔊
-              </button>
-            </div>
-          </div>
-    
-          <!-- Center Content (50%) -->
-          <div class="w-full md:w-2/4 p-4 flex flex-col justify-center text-center">
-            <!-- Website Title -->
-            <h1 class="text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-700 via-pink-600 to-blue-600 drop-shadow-lg mb-6">
-              EventVista360
-            </h1>
-    
-            <!-- Tagline -->
-            <h2 class="text-gray-700 font-semibold text-2xl md:text-4xl italic mb-6">
-              Where Every Detail Tells Your Story.
-            </h2>
-    
-            <!-- Description -->
-            <p class="text-gray-600 text-lg md:text-2xl mb-8 leading-relaxed">
-              We help you create the best memories of your special moments with style, passion, and precision.
-            </p>
-    
-            <!-- Book Now Button -->
-            <a href="#"
-              class="inline-block px-12 py-4 text-xl md:text-2xl bg-gradient-to-r from-pink-500 to-purple-500 text-white font-bold rounded-full shadow-lg hover:shadow-2xl hover:from-purple-600 hover:to-pink-600 transform hover:scale-110 transition-all duration-300">
-              BOOK NOW
-            </a>
-          </div>
-    
-          <!-- Right Image (25%) -->
-          <div class="w-full md:w-1/4 p-4 flex justify-end">
-            <div class="rounded-lg overflow-hidden shadow-2xl w-full aspect-[9/16]">
-              <img src="2.jpg" alt="Right Image" class="w-full h-full object-cover">
-            </div>
-          </div>
-    
-        </div>
+    <section
+    style="background: url('bg-5.jpg') no-repeat center center/cover;"
+    class="w-full py-40 relative text-white"
+  >
+    <!-- Stronger Overlay -->
+    <div class="absolute inset-100 bg-black bg-opacity-10 z-0"></div>
+  
+    <!-- Content -->
+    <div class="relative z-10 container mx-auto px-8 flex items-center justify-start min-h-[60vh]">
+      <div class="bg-grey bg-opacity-200 p-12 rounded-2xl max-w-2xl shadow-2xl backdrop-blur-lg">
+        <h1 class="text-6xl font-extrabold text-white mb-6">
+          EventVista360
+        </h1>
+        <h2 class="text-2xl italic font-light mb-6 text-gray-100">
+          Where Every Detail Tells Your Story.
+        </h2>
+        <p class="text-lg mb-8 text-gray-200">
+          We help you create the best memories of your special moments with style, passion, and precision.
+        </p>
+        <a href="#" class="px-8 py-4 text-lg bg-gradient-to-r from-purple-500 to-pink-500 rounded-full font-bold shadow-xl hover:scale-105 transition-transform duration-300">
+          BOOK NOW
+        </a>
       </div>
-    </section>
-    
-    <!-- JavaScript to control mute -->
-    <script>
-      function toggleMute() {
-        var video = document.getElementById("heroVideo");
-        video.muted = !video.muted;
-      }
-    </script>
-    
-    
-
-    <section class="">
+    </div>
+  </section>
+  
+    <section2 class="">
       <div class="max-w-screen-xl 2xl:max-w-screen-3xl px-8 md:px-12 mx-auto py-12 lg:py-24 flex flex-col items-center justify-center space-y-12">
         <!-- Centered GALLERY Text -->
         <h1 class="text-5xl md:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 animate-pulse">
@@ -127,62 +80,11 @@
           </a>
         </div>
       </div>
-    </section>
+    </section2>
 
-    <section class="bg-white py-16 px-8">
-    <div class="max-w-screen-xl mx-auto text-center">
-      
-      <!-- Heading -->
-      <h2 class="text-4xl md:text-5xl font-extrabold text-gray-800 mb-12">
-        What We Offer
-      </h2>
-  
-      <!-- 3x2 Grid -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-        
-        <!-- Offer Item -->
-        <div class="p-6 bg-gradient-to-r from-pink-100 via-purple-100 to-blue-100 rounded-xl shadow-lg hover:scale-105 transition transform duration-500 cursor-pointer">
-          <i class="fas fa-camera-retro text-4xl text-purple-600 mb-4"></i>
-          <h3 class="text-2xl font-bold text-gray-800 mb-2">Photography</h3>
-          <p class="text-gray-600">Capture your special moments with our professional photography services.</p>
-        </div>
-  
-        <div class="p-6 bg-gradient-to-r from-yellow-100 via-pink-100 to-red-100 rounded-xl shadow-lg hover:scale-105 transition transform duration-500 cursor-pointer">
-          <i class="fas fa-music text-4xl text-red-500 mb-4"></i>
-          <h3 class="text-2xl font-bold text-gray-800 mb-2">Music & DJ</h3>
-          <p class="text-gray-600">Live music, DJ services, and sound systems for every occasion.</p>
-        </div>
-  
-        <div class="p-6 bg-gradient-to-r from-green-100 via-blue-100 to-purple-100 rounded-xl shadow-lg hover:scale-105 transition transform duration-500 cursor-pointer">
-          <i class="fas fa-utensils text-4xl text-green-500 mb-4"></i>
-          <h3 class="text-2xl font-bold text-gray-800 mb-2">Catering</h3>
-          <p class="text-gray-600">Delicious cuisine options tailored to your event and preferences.</p>
-        </div>
-  
-        <div class="p-6 bg-gradient-to-r from-blue-100 via-cyan-100 to-teal-100 rounded-xl shadow-lg hover:scale-105 transition transform duration-500 cursor-pointer">
-          <i class="fas fa-umbrella-beach text-4xl text-blue-500 mb-4"></i>
-          <h3 class="text-2xl font-bold text-gray-800 mb-2">Decorations</h3>
-          <p class="text-gray-600">Beautiful, customizable decor to match your event theme.</p>
-        </div>
-  
-        <div class="p-6 bg-gradient-to-r from-indigo-100 via-violet-100 to-pink-100 rounded-xl shadow-lg hover:scale-105 transition transform duration-500 cursor-pointer">
-          <i class="fas fa-glass-cheers text-4xl text-indigo-500 mb-4"></i>
-          <h3 class="text-2xl font-bold text-gray-800 mb-2">Event Planning</h3>
-          <p class="text-gray-600">End-to-end event planning for stress-free, seamless experiences.</p>
-        </div>
-  
-        <div class="p-6 bg-gradient-to-r from-orange-100 via-amber-100 to-yellow-100 rounded-xl shadow-lg hover:scale-105 transition transform duration-500 cursor-pointer">
-          <i class="fas fa-bus-alt text-4xl text-orange-500 mb-4"></i>
-          <h3 class="text-2xl font-bold text-gray-800 mb-2">Transportation</h3>
-          <p class="text-gray-600">Comfortable and reliable transport solutions for your guests.</p>
-        </div>
-  
-      </div>
-    </div>
-    </section>
   
     <footer class="w-full py-14">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="max-w-3xl mx-auto">
           <a class="flex justify-center text-4xl">
              EVENT VISTA 360 
@@ -221,7 +123,7 @@
               </div>
               <span class="text-lg text-gray-500 text-center block">©<a href="https://pagedone.io/">EVENT VISTA 360</a> 2024, All rights reserved.</span>
       </div>
-  </div>
+      </div>
     </footer>
   </body>
 </html
