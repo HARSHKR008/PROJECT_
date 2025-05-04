@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Feedback Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    backgroundImage: {
+                        'bg-9': "url('bg-9.jpg')",
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.18);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+        }
+        .form-field {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .form-field:hover {
+            transform: translateY(-2px);
+        }
+        .rating-star {
+            transition: all 0.2s ease;
+        }
+        .rating-star:hover {
+            transform: scale(1.3);
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-bg-9 bg-cover bg-center bg-no-repeat bg-fixed flex items-center">
+    <!-- Left-aligned form container with floating animation -->
+    <div class="w-full max-w-md ml-8 mr-auto px-4 py-8 floating">
+        <div class="glass-card rounded-3xl overflow-hidden p-8">
+            <!-- Header with decorative elements -->
+            <div class="text-left mb-8 relative">
+                <div class="absolute -top-4 -left-4 w-16 h-16 rounded-full bg-purple-500/10 blur-xl"></div>
+                <div class="absolute -bottom-4 -right-4 w-16 h-16 rounded-full bg-blue-500/10 blur-xl"></div>
+                
+                <h1 class="text-4xl font-bold mb-2 bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent relative z-10">
+                    Your Feedback
+                </h1>
+                <p class="text-gray-700/90 text-lg relative z-10">We value your experience at our event</p>
+                <div class="w-20 h-1.5 bg-gradient-to-r from-purple-400 to-blue-400 mt-4 rounded-full relative z-10"></div>
+            </div>
+
+            <!-- Feedback Form -->
+            <form class="space-y-6">
+                <!-- Event Selection -->
+                <div class="form-field group">
+                    <label for="event" class="block text-sm font-medium text-gray-700/90 mb-1 transition-all duration-200 group-hover:text-purple-600 flex items-center">
+                        <span class="w-8 h-8 flex items-center justify-center bg-purple-100 text-purple-600 rounded-lg mr-2">
+                            <i class="fas fa-calendar-day text-sm"></i>
+                        </span>
+                        Which event did you attend?
+                    </label>
+                    <select id="event" name="event" class="mt-2 block w-full pl-4 pr-10 py-3 text-base border border-gray-300/70 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-transparent rounded-xl bg-white/70 backdrop-blur-sm transition-all duration-200 hover:border-purple-300/80 shadow-sm">
+                        <option value="" disabled selected>Select an event</option>
+                        <option>Tech Summit 2023</option>
+                        <option>Design Innovation Expo</option>
+                        <option>Startup Launch Night</option>
+                        <option>Creative Minds Workshop</option>
+                        <option>Industry Networking Gala</option>
+                    </select>
+                </div>
+
+                <!-- Rating -->
+                <div class="form-field group">
+                    <label class="block text-sm font-medium text-gray-700/90 mb-2 transition-all duration-200 group-hover:text-purple-600 flex items-center">
+                        <span class="w-8 h-8 flex items-center justify-center bg-yellow-100 text-yellow-600 rounded-lg mr-2">
+                            <i class="fas fa-star text-sm"></i>
+                        </span>
+                        How would you rate this event?
+                    </label>
+                    <div class="flex items-center justify-center space-x-1 bg-white/50 rounded-xl py-3 backdrop-blur-sm">
+                        <input type="radio" id="rating-5" name="rating" value="5" class="hidden peer/rating-5">
+                        <label for="rating-5" class="rating-star text-3xl cursor-pointer peer-checked/rating-5:text-yellow-400 text-gray-300 hover:text-yellow-400"><i class="fas fa-star"></i></label>
+                        
+                        <input type="radio" id="rating-4" name="rating" value="4" class="hidden peer/rating-4">
+                        <label for="rating-4" class="rating-star text-3xl cursor-pointer peer-checked/rating-4:text-yellow-400 text-gray-300 hover:text-yellow-400"><i class="fas fa-star"></i></label>
+                        
+                        <input type="radio" id="rating-3" name="rating" value="3" class="hidden peer/rating-3">
+                        <label for="rating-3" class="rating-star text-3xl cursor-pointer peer-checked/rating-3:text-yellow-400 text-gray-300 hover:text-yellow-400"><i class="fas fa-star"></i></label>
+                        
+                        <input type="radio" id="rating-2" name="rating" value="2" class="hidden peer/rating-2">
+                        <label for="rating-2" class="rating-star text-3xl cursor-pointer peer-checked/rating-2:text-yellow-400 text-gray-300 hover:text-yellow-400"><i class="fas fa-star"></i></label>
+                        
+                        <input type="radio" id="rating-1" name="rating" value="1" class="hidden peer/rating-1">
+                        <label for="rating-1" class="rating-star text-3xl cursor-pointer peer-checked/rating-1:text-yellow-400 text-gray-300 hover:text-yellow-400"><i class="fas fa-star"></i></label>
+                    </div>
+                </div>
+
+                <!-- Liked Most -->
+                <div class="form-field group">
+                    <label for="liked" class="block text-sm font-medium text-gray-700/90 mb-1 transition-all duration-200 group-hover:text-purple-600 flex items-center">
+                        <span class="w-8 h-8 flex items-center justify-center bg-green-100 text-green-600 rounded-lg mr-2">
+                            <i class="fas fa-heart text-sm"></i>
+                        </span>
+                        What did you enjoy most?
+                    </label>
+                    <textarea id="liked" name="liked" rows="3" class="mt-2 block w-full sm:text-sm border border-gray-300/70 rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-transparent bg-white/70 backdrop-blur-sm transition-all duration-200 hover:border-purple-300/80 shadow-sm" placeholder="The speakers, venue, networking opportunities..."></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="pt-4">
+                    <button type="submit" class="w-full flex justify-center items-center py-3.5 px-4 border border-transparent rounded-xl text-sm font-medium text-white bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500/50 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 active:translate-y-0">
+                        <i class="fas fa-paper-plane mr-2"></i> Submit Feedback
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Thank You Message -->
+        <div id="thankYou" class="hidden glass-card rounded-3xl overflow-hidden p-8 text-center mt-8">
+            <div class="text-green-500 text-6xl mb-4 animate-bounce">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2 class="text-3xl font-bold text-gray-800 mb-2">Thank You!</h2>
+            <p class="text-gray-700/90 text-lg mb-6">Your feedback helps us create better experiences</p>
+            <button onclick="location.reload()" class="px-6 py-2.5 rounded-xl border border-gray-300/70 text-gray-700 hover:bg-white/50 hover:border-transparent transition-all duration-300 shadow-sm">
+                <i class="fas fa-redo mr-2"></i> Submit Another
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Form submission handling with animation
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Add submission animation
+            const form = this;
+            form.style.opacity = '0';
+            form.style.transform = 'translateX(-20px)';
+            
+            setTimeout(() => {
+                form.style.display = 'none';
+                const thankYou = document.getElementById('thankYou');
+                thankYou.classList.remove('hidden');
+                thankYou.style.opacity = '0';
+                thankYou.style.transform = 'translateY(20px)';
+                
+                // Animate thank you message in
+                setTimeout(() => {
+                    thankYou.style.opacity = '1';
+                    thankYou.style.transform = 'translateY(0)';
+                }, 50);
+            }, 300);
+            
+            // In a real app, you would send the form data to your server here
+        });
+    </script>
+</body>
+</html>
